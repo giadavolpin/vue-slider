@@ -1,3 +1,8 @@
+/* Bonus:
+1- al click su una thumb, visualizzare in grande l'immagine corrispondente
+2- applicare l'autoplay allo slider: ogni 2 secondi, cambia immagine automaticamente
+3- quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
+ */
 const slides = [
     {
         image: 'img/01.webp',
