@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click = "prevMovie()" ></div>
+                    <div class="next" @click = "nextMovie()" ></div>
                                                 <!-- movie.slides è il richiamo dell'array -->
                     <div v-for="(slide, index) in movie.slides"  class="thumb" :class="activeIndex === index ? 'active' : '' " >
                         <img  :src="slide.image" :alt="'immagine movie ' + index"/>
@@ -50,3 +50,10 @@
     <script src="./script.js"></script>
 </body>
 </html>
+
+
+
+<!-- esempi: 
+< li v-for= "(name, index) in names">
+{{index}} {{name}}
+</li> -->

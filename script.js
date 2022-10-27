@@ -34,8 +34,9 @@
     createApp({
         data(){
             return {
-                activeIndex: 2,
-                movie: {
+                activeIndex: 0,
+                autoscroll:null,
+                movie:{
                     title: 'Spiderman',
                     slides: [
                         {   //slide è tutto il primo blocco 
@@ -66,5 +67,31 @@
                     ]        
                 }
             }
+        },
+        methods:{
+            prevMovie(){
+                this.activeIndex--
+                if(this.activeIndex < 0){
+                    this.activeImage = this.movie.images.lenght -1
+                }
+            },
+            nextMovie(){
+                this.activeIndex++
+                if(this.activeIndex > this.movie.image.length){
+                    this.activeImage = 0;
+                }
+            },
+            autoScroll(){
+               this.autoscroll = setInterval(()=>{
+                    this.nextMovie();
+                },2000)
+            },
+            stopAutoScroll(){
+                clearInterval(this.autoScroll);
+                this.autoScroll = null;
+            }
+        },
+        mounted(){
+            this.autoScroll();
         }
     }) .mount('#app')
