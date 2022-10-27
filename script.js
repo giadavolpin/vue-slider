@@ -29,12 +29,15 @@
     
     console.log(slides); */
 
+    const {createApp} = Vue
+
     createApp({
         data(){
             return {
+                activeIndex: 0,
                 movie: {
                     title: 'Spiderman',
-                    slides = [
+                    slides: [
                         {
                             image: 'img/01.webp',
                                 title: 'Marvel\'s Spiderman Miles Morale',
