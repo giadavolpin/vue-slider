@@ -31,9 +31,9 @@
 
     const {createApp} = Vue
 
-    createApp({
-        data(){
-            return {
+    createApp({   //metodo
+        data(){    //dati
+            return {  //che ci ritornano 
                 activeIndex: 0,
                 autoscroll:null,
                 movie:{
